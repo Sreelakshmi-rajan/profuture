@@ -1,0 +1,314 @@
+body {
+    margin: 0;
+    background-color: #121212;
+    overflow-x: hidden;
+    height: 2000px;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  /* width */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 15px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+  
+  .navbar {
+    background-color: #1a1a1a;
+    width: 100%;
+    display: flex;      
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    position: fixed;
+    border-bottom: 1px solid rgba(236,236,236,0.1);
+  }
+  
+  .links {
+    text-align: center;
+    margin: auto;
+    padding: 20px 22px;
+    display: inline-block;
+  }
+  
+  .links a {
+    padding: 14px 60px;
+    text-decoration: none;
+    border-radius: 7px;
+    text-align: center;
+    color: gray;
+    font-family: Calibri;
+    font-size: 20px;
+  }
+  
+  .links a:hover {
+    background-color: #404040;
+  }
+  
+  #active {
+    border-radius: 0;
+    border-bottom: 5px solid #4267B2;
+    color: #4267B2;
+  }
+  
+  #active:hover {
+    background-color: #1a1a1a;
+  }
+  
+  .search {
+    border-radius: 50px;
+    position: absolute;
+    display: inline-block;
+    background-color: #3b3b3b;
+    margin-left: 15px;
+    text-align: center;
+  }
+  
+  .search i {
+    position: absolute;
+    color: gray;
+    top: 0px;
+    left: 0px;
+    padding: 14px 16px;
+  }
+  
+  .search input {
+    left: 0;
+    border-radius: 50px;
+    outline: none;
+    border: none;
+    padding: 14px 16px;
+    background-color: #3b3b3b;
+    color: white;
+    padding-left: 50px;
+  }
+  
+  .right {
+    float: right;
+    text-align: center;
+    padding: 20px 22px;
+    display: inline-block;
+    margin: 0px;
+  }
+  
+  .right a {
+    transition: all .2s;
+    text-align: center;
+    text-decoration: none;
+    color: #c7c7c7;
+    font-size: 20px;
+    border-radius: 50%;
+    padding: 14px 16px;
+    background-color: #2e2e2e;
+    margin-left: 5px;
+  }
+  
+  .right a:hover {
+    background-color: #3d3d3d;
+  }
+  
+  #dropdown-arrow {
+    width: 370px;
+    background-color: #1a1a1a;
+    float: right;
+    margin-right: 1%;
+    border-radius: 15px;
+    overflow-x: hidden;
+    margin: 2px;
+    border-color: rgba(236,236,236,0.1);
+    border-style: solid;
+    border-width: 1px;
+  }
+  
+  #dropdown-arrow hr {
+    margin: 0px 20px 0px 20px;
+  }
+  
+  .dropdown-a {
+    padding: 14px 16px;
+    font-size: 17px;
+    color: #c7c7c7;
+    border-radius: 7px;
+    font-family: Segoe UI;
+    float: left;
+    overflow-x: hidden;
+    z-index: -1;
+    width: 100%;
+    margin: 3px;
+  }
+  
+  .dropdown-a:hover {
+    background-color: #3b3b3b;
+  }
+  
+  .dropdown-a p {
+    font-size: 15px;
+  }
+  
+  .left {
+    border-radius: 50%;
+    background-color: #2e2e2e;
+    padding: 12px 14px;
+    z-index: -1;
+    margin-right: 15px;
+  }
+  
+  .right2 {
+    float: right;
+    margin-right: 10%;
+    text-align: center;
+    padding: 9px 13px;
+    font-size: 23px;
+  }
+  
+  /* The Modal (background) */
+  .dropdown {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    padding-top: 60px;
+  }
+  
+  .dropdown img {
+    border-radius: 50%;
+  }
+  
+  .dropdown-p {
+    color: gray;
+    font-family: Segoe UI;
+    margin: 0;
+  }
+  
+  .dropdown-aa {
+    color: gray;
+    font-family: Calibri;
+  }
+  
+  .dropdown-aa:hover {
+    text-decoration: underline;
+  }
+  
+  
+  .sidebar {
+    width: 300px;
+    background-color: #121212;
+    border: 10px solid #121212;
+    overflow-x: hidden;
+    position: fixed;
+    height: 100%;
+    margin-top: 70px;
+  }
+  
+  .sidebar a {
+    text-decoration: none;
+    color: #c7c7c7;
+    font-family: Arial;
+    float: left;
+    width: 97%;
+    border-radius: 7px;
+    transition: all .1s;
+    display: inline-block;
+    text-align: left;
+  }
+  
+  .sidebar a:hover {
+    background-color: #404040;
+  }
+  
+  .sidebar a img {
+    float: left;
+    display: block;
+    padding: 14px 16px;
+  }
+  
+  .sidebar a p {
+    float: left;
+    font-size: 17px;
+  }
+  
+  .profile-pic {
+    border-radius: 50%;
+  }
+  
+  .sidebar hr {
+    width: 100%;
+  }
+  
+  .sidebar h3 {
+    color: gray;
+    font-family: Segoe UI;
+    margin: 0;
+  }
+  
+  .shortcuts {
+    border-radius: 20px;
+    width: 35px;
+    height: 35px;
+    margin: 0;
+  }
+  
+  
+  
+  
+  
+  
+  
+  /*
+  Responsive height
+  */
+  @media only screen and (max-height: 560px) {
+    #dropdown-arrow {
+    width: 400px;
+    height: 280px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    border-right: 0px;
+    }
+  }
+  
+  @media only screen and (max-height: 350px) {
+    #dropdown-arrow {
+    width: 400px;
+    height: 100px;
+    }
+  }
+  
+  @media only screen and (max-height: 600px) {
+    .sidebar {
+    height: 500px;
+    }
+  }
+  
+  
+  
+  
+  /*
+  Responsive width
+  */
+  @media only screen and (max-width: 1400px) {
+    .links a {
+      padding: 18px 20px;
+    }
+   
+    .search {
+      display: none;
+    }
+  }
+  
