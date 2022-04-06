@@ -44,6 +44,13 @@ def register(request):
          #return redirect('login')
 def home(request):
     return render(request,'user_mod/home.html')
+def studhome(request):
+    return render(request,'user_mod/studhome.html')
+def clienthome(request):
+    plat=platform.all
+    return render(request,'user_mod/clienthome.html')
+    
+
 
 
 
