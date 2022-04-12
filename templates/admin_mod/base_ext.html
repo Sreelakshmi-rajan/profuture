@@ -1,6 +1,98 @@
-{% extends 'base.html' %}
+{% extends 'admin_mod/base.html' %}
 {% load static %}
 {% block body %}
+<!--<link rel="stylesheet" href="{% static 'css/main.css'%}">
+<link rel="stylesheet" href="{% static 'css/util.css'%}">!-->
+<style>
+  .card {
+    box-shadow: 0 0 10px 0 rgba(100, 100, 100, 0.26);
+  }
+  
+</style>
 
+<div class="container">
+<div class="row">
+<!--<div class="col-sm-4">
+  <div class="card" style="height: 200px;">
+    <div class="card shadow border">
+      <div class="card-body">
+        <h5 class="card-title"><a href="#">Add Projects   </a></h5>
+        <p class="card-text"></p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
+  </div>
+</div>!-->
+<div class="col-sm-4">
+  <div class="card" style="height: 200px; width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title" style="color: blue;"><a href="{% url 'add_platform_show' %}" >Platforms</a></h5>
+      <p class="card-text">Add the new platforms here</p>
+       
+    </div>
+  </div>
+</div>
+  <div class="col-sm-4">
+    <div class="card" style="height: 200px; width: 18rem;">
+      <div class="card-body">
+        <h5 class="card-title" style="color: blue;"><a href="{% url 'project_view' %}">Project Requests</a></h5>
+        <p class="card-text">View project requests here</p>
+          
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-4">
+    <div class="card" style="height: 200px; width: 18rem;">
+      <div class="card-body">
+        <h5 class="card-title" style="color: blue;"><a href="{% url 'add_project_show' %}">Projects</a></h5>
+        <p class="card-text">You can add Projects here</p>
+        
+      </div>
+    </div>
+  </div>
+</div>
+</div>
 
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4">
+      <div class="card-deck mt-4"></div>
+      <div class="card" style="height: 200px; width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title" style="color: blue;"> <a href="{% url 'add_mcq' %}">MCQ</a></h5>
+          <p class="card-text">Add MCQs here</p>
+           
+        </div>
+      </div>
+    </div>
+
+      <div class="col-sm-4">
+        <div class="card-deck mt-4">
+        <div class="card" style="height: 200px; width: 18rem;">
+          <div class="card-body">
+            <h5 class="card-title"style="color: blue;"><a href="{% url 'course' %}">Courses</a></h5>
+            <p class="card-text">You can add courses here</p>
+              
+          </div>
+        </div>
+      </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="card-deck mt-4">
+        <div class="card" style="height: 200px; width: 18rem;">
+          <div class="card-body">
+            <h5 class="card-title" style="color: blue;"> <a href="#">Company contact</a></h5>
+            <p class="card-text">add company details here</p>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    
+    
 {% endblock %}
+
+

@@ -3,24 +3,43 @@ from django.contrib.auth.models import User,auth
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages 
 from .models import *
+from admin_mod.models import *
+
 
 # Create your views here.
 def index(request):
     return render(request,'user_mod/index.html')
 def logreg(request):
     return render(request,'user_mod/logreg.html')
+    
 
-
+def loginpage(request):
+    return render(request,'user_mod/logreg.html')
 
 def login(request) :
     if request.method=='POST':
       username = request.POST['username']
       password = request.POST['password']
-      user = auth.authenticate(username=username,password=password) 
+      user = auth.authenticate(username=username,password=password)
       if user is not None:
         auth.login(request,user)
         messages.info(request,'login successfully')
-        return redirect('home')
+        return redirect('clienthome')
+    return redirect('loginpage')
+
+def clienthome(request):
+    plat = platform.objects.filter(userid_id=request.user)
+    plat1 = platform.objects.get(userid_id=request.user)
+    proj = project_table.objects.filter(platformid_id=plat1.platformid)
+    return render(request,'user_mod/clienthome.html',{'plat': plat, 'proj':proj})
+    
+def mcq(request):
+    multiple = course_mcq.object.all()
+    return render(request,'user_mod/mcq.html',{'multiple':multiple})
+
+  
+    
+      
 
 
 def register(request):
@@ -46,10 +65,9 @@ def home(request):
     return render(request,'user_mod/home.html')
 def studhome(request):
     return render(request,'user_mod/studhome.html')
-def clienthome(request):
-    plat=platform.all
-    return render(request,'user_mod/clienthome.html')
-    
+
+def project(request):
+    return render(request,'user_mod/project.html')
 
 
 

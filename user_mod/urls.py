@@ -9,6 +9,10 @@ urlpatterns = [
     path('home',views.home,name='home'),
     path('studhome',views.studhome,name='studhome'),
     path('clienthome',views.clienthome,name='clienthome'),
+    path('loginpage',views.loginpage,name='loginpage'),
+    path('mcq',views.mcq,name='mcq'),
+    path('tutorial',views.tutorial,name='tutorial'),
+    path('project',views.project,name='project'),
 
 
    
