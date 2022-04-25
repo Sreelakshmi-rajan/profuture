@@ -7,10 +7,10 @@ from .models import *
 def index(request):
     return render(request,'admin_mod/index.html')
 
-def login_page(request):
+def admin_login_page(request):
     return render(request,'admin_mod/login.html')
 
-def login(request):
+def admin_login(request):
     if request.method == 'POST':
         username = request.POST['username']
         password = request.POST['password']
@@ -24,8 +24,7 @@ def login(request):
 def register_page(request):
     return render(request,'admin_mod/register.html')
 
-def register(request):
-    #try:
+def admin_register(request):
         if request.method == 'POST':
             fname = request.POST['first_name']
             lname = request.POST['last_name']
@@ -35,11 +34,9 @@ def register(request):
             confirm_pswd = request.POST['cnfm_password']
             user = User.objects.create_user(first_name=fname,last_name=lname,email=email,username=username,password=password)
             user.save()
-            return redirect('login_page')
-        #else:
-            #return redirect('login')
-    #except:
-        #return redirect('login')
+            return redirect('admin_login')
+        else:
+            return redirect('register_page')
 
 def base_ext(request):
     return render(request,'admin_mod/base_ext.html')

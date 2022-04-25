@@ -16,7 +16,7 @@
 </head>
 <body>
     <nav class="navbar">
-        <div class="logo"><img src="https://upload.wikimedia.org/wikipedia/commons/2/23/AS_sample_logo.png" alt="LOGO"></div>
+        <div class="logo"></div>
         <div class="push-left">
           <button id="menu-toggler" data-class="menu-active" class="hamburger">
             <span class="hamburger-line hamburger-line-top"></span>
@@ -53,17 +53,17 @@
     <div class="container py-5">
         <!-- For Demo Purpose-->
         <header class="text-center mb-5">
-          <h1 class="display-4 font-weight-bold">projects</h1>
+          <h1 class="display-4 font-weight-bold">Projects</h1>
           <p class="font-italic text-muted mb-0">.</p>
-          <p class="font-italic text-muted">Snippet By <a href="https://bootstrapious.com" class="text-muted">
-              <u>profuture</u></a>
+          <p class="font-italic text-muted"> <a href="https://bootstrapious.com" class="text-muted">
+              <u></u></a>
           </p>
         </header>
       
       
         <!-- First Row [Prosucts]-->
-        <h2 class="font-weight-bold mb-2">From profuture </h2>
-        <p class="font-italic text-muted mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
+        <h2 class="font-weight-bold mb-2">From project House </h2>
+        <p class="font-italic text-muted mb-4">start something new</p>
        
       
         <div class="row pb-5 mb-4">
@@ -72,7 +72,7 @@
             <!-- Card-->
             <div class="card rounded shadow-sm border-0">
               <div class="card-body p-4"><img src="" alt="" class="img-fluid d-block mx-auto mb-3">
-                <h5> <a href="{% url 'project' %}" class="text-dark">{{j.project_name}}</a></h5>
+                <h5> <a href="{% url 'project' j.projectid %}" class="text-dark">{{j.project_name}}</a></h5>
                 <p class="small text-muted font-italic">{{j.documentation}}</p>
                 
               </div>

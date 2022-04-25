@@ -10,7 +10,7 @@
 </head>
 <body>
  
-  <form action="register" method="POST" id="regForm">
+  <form action="{% url 'admin_register' %}" method="POST" id="regForm">
     {% csrf_token %}
     <lable id="title">Register Here</lable>
     <table>

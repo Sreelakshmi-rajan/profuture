@@ -1,68 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    {% load static %}
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static'css/studhome_style.css'%}">
-    <title>Document</title>
+  {% load static %}
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static 'css/studhome_style.css' %}">
+  
+  <title></title>
 </head>
-<body>
-     <!--====== Header Section Start ======-->
-<header>
-    {% load static %}
-    <nav class="navigation">
-  
-      <!-- Logo -->
-      <div class="logo">
-        <h1>PROFUTURE</h1>
-      </div>
-      
-      <!-- Navigation -->
-      <ul class="menu-list">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Services</a></li>
-        <li><a href="#portfolio">mcq</a></li>
-        <li><a href="#">view profile</a></li>
-        <li><a href="#portfolio">tutorials</a></li>
 
-        <li><a href="#">Contact</a></li>
-      </ul>
-  
-      <div class="humbarger">
-        <div class="bar"></div>
-        <div class="bar2 bar"></div>
-        <div class="bar"></div>
-      </div>
-    </nav>
-    
-    <!-- ==== Intro Section Start ==== -->
-    <div class="intro-section" id="home">
-      <div class="bg-img"></div>
-      <div class="intro-content">
-        <h1>Web Developer</h1>
-        <h6>from Kenya</h6>
-        <p class="tagline">
-          <span class="change-container">
-            <span class="changing">get what you want</span>
-            <span class="changing">how you want it</span>
-            <span class="changing">when you want it</span>
-          </span>
-        </p>
-        <div class="header-btn animated bounceIn">
-          <a href="#contact"><span>Get A Quote</span></a>
-        </div>
-        <!-- social media -->
-      </div>
-    </div>	
+
+<body>
+  <header class="navbar">
+    <ul class="navigation">
+      <li><a class="nava" href="">Home</a></li>
+      <li><a class="nava" href="">Discover</a></li>
+      <li><a class="nava" href="">Search</a></li>
+      <li><a class="nava" href="">Profile</a></li>
+    </ul>
   </header>
-  
-    
-  </body>
-  </html>
-  
-    
+  <main class="content">
+    <div id="container-grid">
+      <div class="grid-item gia">
+        <div class="left">
+          <p class="title">Say hello to the <a class="linkable" href="">future</a></p>
+          <p class="desc">Shaping the way in digital technologies to give you a unique and tailored online experience</p>
+        </div>
+        <div class="right">
+          <img src="https://img.freepik.com/free-vector/startup-rocket-launch-project-start-setting-business-company-founding-teamwork-cooperation-partnership-businesspeople-cartoon-characters_335657-1191.jpg" alt="" class="side-img">
+        </div>
+      </div>
+      <div class="grid-item gib">
+        <p class="title"> Creating <a class="linkable" href="">your</a> future</p>
+        <p>When you entrust us with your data, we make sure that we will not dissapoint. With awards from a multitude of sites, we create a safe environment for your business.</p>
+      </div>
+      <div class="grid-item sg giv">
+        <div class="align">
+        <p class="title">Analytics</p>
+        </div>
+        <p>When finding your product, it can be difficult to pinpoint <a href="" class="linkable">customer salespoints</a>. Thats where we come in, doing that hard work for you so you can relax.</p>
+      </div>
+      <div class="grid-item sg giw">
+        <div class="align">
+        <p class="title">Efficient</p>
+        </div>
+      </div>
+      <div class="grid-item sg gix">
+        <div class="align">
+        <p class="title">Centralization</p>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer class="footer"></footer>
 </body>
 </html>

@@ -16,15 +16,31 @@ def logreg(request):
 def loginpage(request):
     return render(request,'user_mod/logreg.html')
 
-def login(request) :
+def login(request):
     if request.method=='POST':
       username = request.POST['username']
       password = request.POST['password']
       user = auth.authenticate(username=username,password=password)
       if user is not None:
         auth.login(request,user)
-        messages.info(request,'login successfully')
-        return redirect('clienthome')
+        cur_user=request.user
+        user_id=cur_user.id
+        print(user_id)
+        print('user')
+
+        usert= userprofile.objects.get(userid_id=user_id)
+        print(usert.usertype)
+        if usert.usertype=='Student':
+            messages.info(request,'login successfully')
+            return redirect('studhome')
+        if usert.usertype=='Client':
+            messages.info(request,'login successfully')
+            return redirect('clienthome')
+        else:
+            return redirect('loginpage')
+      
+    
+       
     return redirect('loginpage')
 
 def clienthome(request):
@@ -36,11 +52,6 @@ def clienthome(request):
 def mcq(request):
     multiple = course_mcq.object.all()
     return render(request,'user_mod/mcq.html',{'multiple':multiple})
-
-  
-    
-      
-
 
 def register(request):
     #try:
@@ -66,8 +77,10 @@ def home(request):
 def studhome(request):
     return render(request,'user_mod/studhome.html')
 
-def project(request):
-    return render(request,'user_mod/project.html')
+def project(request, id):
+    iproject = project_table.objects.filter(projectid=id)
+    return render(request,'user_mod/project.html', {'iproject': iproject}),
+
 
 
 
